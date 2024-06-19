@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Conta {
     String titular;
-    String identificador;
+    private String identificador;
     String senha;
-    float saldo;
+    private float saldo;
 
     static String nomeBanco;
 
@@ -17,13 +17,17 @@ public class Conta {
         this.saldo=saldo;
     }
 
-    void gerarIdentificador(){
+     private void gerarIdentificador(){
         String texto = "";
         for (int i=0;i<4;i++){
             texto+=(char) new Random().nextInt(65,91);
         }
         int valor = new Random().nextInt(1000,10000);
         identificador= texto + valor;
+    }
+
+    public String getIdentificador(){
+        return identificador;
     }
 
     void depositar (float valor) {
