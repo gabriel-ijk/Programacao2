@@ -15,9 +15,12 @@ public class Conta {
     }
 
     void gerarIdentificador(){
-        char letra = (char) new Random().nextInt(65,91);
+        String texto = "";
+        for (int i=0;i<4;i++){
+            texto+=(char) new Random().nextInt(65,91);
+        }
         int valor = new Random().nextInt(1000,10000);
-        identificador = letra+"_"+valor;
+        identificador= texto + valor;
     }
 
     void depositar (float valor) {

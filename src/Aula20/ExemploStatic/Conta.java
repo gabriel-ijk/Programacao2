@@ -1,13 +1,16 @@
-package Aula19;
+package Aula20.ExemploStatic;
 
 import java.util.Random;
+
 public class Conta {
     String titular;
     String identificador;
     String senha;
     float saldo;
 
-    public Conta (String titular, String senha, float saldo){
+    static String nomeBanco;
+
+    public Conta(String titular, String senha, float saldo){
         gerarIdentificador();
         this.titular=titular;
         this.senha=senha;
