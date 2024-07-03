@@ -6,9 +6,4 @@ public class ContaCorrente extends Conta{
     private String senha;
     private float limite;
 
-
-    public String contaCorrente(){
-
-    }
-
 }
